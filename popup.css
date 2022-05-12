@@ -1,0 +1,21 @@
+.container {
+    width: 315px;
+    font-size: 15pt;
+    background-color: #777;
+    color: white;
+}
+
+body {
+    background-color: #777;
+    font-family: sans-serif;
+}
+
+span {
+    font-weight: bolder;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+a, a:hover, a:active, a:visited, a:focus, a:hover { color:white }

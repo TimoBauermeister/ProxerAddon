@@ -1,0 +1,158 @@
+:root {
+    --background-surface: #19161b;
+    --background-darkend: #0c0b0e;
+    --background-shadow: #15111f;
+    --background-element: #1b1820;
+    --background-accent: #41354b;
+    --background-accent-transparent: #231f2750;
+    --background-brightAccent: #7b668f;
+    --elemLayer: #242231;
+    --elemLayer-dark: #191820;
+    --elemLayer-transparent: #16151a70;
+    --elemLayer-accent: #383247;
+    --textOnElem: #d4c8e0;
+    --textOnElemGrey:#8a8294e;
+    --secondary-main: #045b62;
+    --secondary-accent: #3d8086;
+    --secondary-elem: #0d484e;
+    --secondary-dark: #02393e;
+    --colorLink: #c59e64;
+    --colorLinkHover: #ac6f36;
+    --colorLinkVisited: #c9652c;
+    --noColor: #0000;
+}
+a {
+    color: var(--colorLink)!important;
+}
+body {
+    background-color: var(--background-surface)!important;
+}
+#nav {
+    background-color: var(--elemLayer)!important;
+}
+#main {
+    background-color: var(--elemLayer)!important;
+}
+li.topmenu ul {
+    background-color: var(--elemLayer)!important;
+    border-color: var(--elemLayer-accent)!important;
+}
+li.topmenu ul li:hover {
+    background-color: var(--elemLayer-accent)!important;
+}
+#notificationBubble, #loginBubble, .customBubble, .pointerBubble {
+    background-color: var(--elemLayer)!important;
+    border-color: var(--elemLayer-accent)!important;
+}
+#proxerSearch1 {
+    color: var(--textOnElem)!important;
+    border: 1px var(--elemLayer-accent) solid!important;
+    background-color: var(--background-element)!important;
+}
+#submitSearch1 {
+    cursor: pointer!important;
+    color: var(--textOnElem)!important;
+    background-color: var(--elemLayer)!important;
+    border: 2px var(--background-darkend) solid!important;
+    border-radius: 6px!important;
+}
+ul#simple-navi li, ul#simple-navi-wiki li {
+    background: var(--background-element)!important;
+}
+ul#simple-navi li a, ul#simple-navi-wiki li.active a, ul#simple-navi-wiki li a.active, ul#simple-navi-wiki li a:hover {
+    color: var(--textOnElem)!important;
+    background: var(--background-element)!important;
+    filter: none!important;
+    background-color: var(--elemLayer-accent)!important;
+    border: 1px var(--background-element) solid!important;
+    border-radius: 6px 6px 0 0!important;
+}
+ul#simple-navi li.active a {
+    background-color: var(--elemLayer)!important;
+    border-bottom: 1px var(--elemLayer) solid!important;
+}
+ul#simple-navi, ul#simple-navi-wiki {
+    background: var(--background-element)!important;
+    background-color: var(--elemLayer)!important;
+}
+ul#simple-navi li a:hover {
+    background-color: var(--background-accent)!important;
+    border-bottom: 1px var(--elemLayer-accent) solid!important;
+}
+ul#simple-navi li.active a:hover {
+    border-bottom: 1px var(--elemLayer) solid!important;
+}
+ul#simple-navi, ul#simple-navi-wiki {
+    background-color: var(--background-element)!important;
+}
+/*Chapter tables*/
+div#contentList table tbody tr td tr th {
+    background-color: var(--background-element)!important;
+}
+div#contentList table tbody tr *{
+    background-color: var(--background-element)!important;
+}
+div#contentList table tbody tr td {
+    background-color: var(--background-element)!important;
+}
+div#contentList table tbody tr:nth-child(2n) * {
+    background-color: var(--background-accent)!important;
+}
+tr td table tbody tr * {
+    background-color: var(--background-element)!important;
+}
+span.hreview-aggregate table tr td table {
+    background-color: var(--background-accent)!important;
+}
+span.hreview-aggregate table tr td table tbody tr td{
+    background-color: var(--background-element)!important;
+}
+/*profile Anime/Manga tables*/
+#box-table-a tbody tr *{
+    background-color: var(--noColor)!important;
+    color: var(--colorLink)!important;
+}
+#box-table-a tbody tr:nth-child(2n) {
+    background-color: var(--background-accent)!important;
+}
+#box-table-a tbody tr *:hover {
+    color: var(--colorLinkHover)!important;
+}
+#box-table-a tbody tr:hover {
+    background-color: var(--background-element)!important;
+}
+#submitSearch1:hover {
+    background-color: var(--elemLayer-accent)!important;
+}
+.searchAutocompleteBox1 {
+    background-color: var(--elemLayer-transparent)!important;
+    backdrop-filter: blur(20px)!important;
+}
+.fastSearchEntry {
+    background-color: var(--elemLayer-transparent)!important;
+    border: 2px var(--background-accent) solid!important;
+    backdrop-filter: blur(20px)!important;
+}
+.fastSearchEntry:hover {    
+    background-color: var(--elemLayer)!important;
+}
+#customButtons * {
+    background-color: var(--elemLayer)!important;
+}
+#customButtons tbody tr td a {
+    background-color: var(--background-element)!important;
+}
+#customButtons tbody tr td a:hover {
+    color: var(--colorLinkHover)!important;
+    background-color: var(--background-accent)!important;
+}
+/*Comments*/
+table.details tbody tr, table.details tbody tr td, table.details tbody tr td table tbody tr td img {
+    background-color: var(--elemLayer-dark)!important;
+}
+.notificationList:visited {
+    color: var(--colorLinkVisited)!important;
+}
+img[src="/images/misc/proxerdonate.png"] {
+    display: none!important;
+}

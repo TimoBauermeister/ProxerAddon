@@ -1,0 +1,63 @@
+{
+    "author": "Hazy, eSaltcracker",
+    "content_scripts": [
+        {
+            "js": [
+                "content-anime.js"
+            ],
+            "matches": [
+                "*://*.proxer.me/watch/*",
+                "*://proxer.me/watch/*"
+            ]
+        },
+        {
+            "css": [
+                "customStylesheet.css"
+            ],
+            "matches": [
+                "*://*.proxer.me/*"
+            ]
+        },
+        {
+            "js": [
+                "content-manga.js"
+            ],
+            "matches": [
+                "*://*.proxer.me/chapter/*",
+                "*://proxer.me/chapter/*"
+            ]
+        },
+        {
+            "js": [
+                "content-user.js"
+            ],
+            "matches": [
+                "*://*.proxer.me/user/*",
+                "*://proxer.me/user/*"
+            ]
+        }
+    ],
+    "name": "Proxer - Quality Of Life",
+    "description": "Make your life on proxer more pleasant!",
+    "version": "0.5.1",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "main.js"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "30": "images/proxerLogo.png",
+            "36": "images/proxerLogo.png",
+            "48": "images/proxerLogo.png"
+        }
+    },
+    "icons": {
+        "30": "images/proxerLogo.png",
+        "36": "images/proxerLogo.png",
+        "48": "images/proxerLogo.png"
+    }
+}
