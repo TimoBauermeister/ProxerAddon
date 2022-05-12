@@ -36,10 +36,19 @@
                 "*://proxer.me/user/*"
             ]
         }
+        ,
+        {
+            "js": [
+                "calendar-improvement.js"
+            ],
+            "matches": [
+                "*://proxer.me/calendar*"
+            ]
+        }
     ],
     "name": "Proxer - Quality Of Life",
     "description": "Make your life on proxer more pleasant!",
-    "version": "0.5.1",
+    "version": "0.6.1",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"

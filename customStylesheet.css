@@ -26,6 +26,7 @@ a {
 }
 body {
     background-color: var(--background-surface)!important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif!important; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
 }
 #nav {
     background-color: var(--elemLayer)!important;
@@ -158,4 +159,43 @@ img[src="/images/misc/proxerdonate.png"] {
 }
 img[width="100"] {
     border-radius: 12px;
+    transition: 0.2s;
+    transform:scale(1.0);
+}
+img[width="100"]:hover{
+    transform:scale(1.2);
+}
+/*Callendar I dont use but hey LOOL*/
+table.calendarTable {
+    border-top: 0px var(--noColor) solid!important;
+    background-color: var(--background-element)!important;
+    border-spacing: 14px!important;
+    width: 100%!important;
+}
+table.calendarTable tbody {
+    background-color: var(--noColor)!important;
+}
+table.calendarTable tbody {
+    border-collapse: separate!important;
+}
+table.calendarTable tbody td[width="150"] {
+    border-radius: 16px;
+}
+table.calendarTable tbody td[width="150"] img {
+    border-radius: 16px;
+    transition: 0.2s;
+    transform:scale(1.0);
+}
+table.calendarTable tbody td[width="150"] img:hover {
+    transform:scale(1.4);
+}
+div.inner {
+    color: var(--textOnElem)!important;
+}
+div[id^="entry"]{
+    background-color: var(--elemLayer-dark)!important;
+    border-top: 3px var(--elemLayer-accent) solid!important;
+}
+div[id^="entry"]:hover{
+    background-color: var(--elemLayer-accent)!important;
 }
