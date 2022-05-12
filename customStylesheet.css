@@ -16,9 +16,9 @@
     --secondary-accent: #3d8086;
     --secondary-elem: #0d484e;
     --secondary-dark: #02393e;
-    --colorLink: #c59e64;
-    --colorLinkHover: #ac6f36;
-    --colorLinkVisited: #c9652c;
+    --colorLink: #ffac68;
+    --colorLinkHover: #be4600;
+    --colorLinkVisited: #bb1515;
     --noColor: #0000;
 }
 a {
@@ -192,10 +192,22 @@ table.calendarTable tbody td[width="150"] img:hover {
 div.inner {
     color: var(--textOnElem)!important;
 }
+table.calendarTable table td a:hover {
+    color: var(--colorLinkHover)!important;
+}
+.headDate {
+    border-color: var(--background-accent)!important;
+}
+.calendarHeadNav table {
+    background-color: var(--background-element)!important;
+}
 div[id^="entry"]{
     background-color: var(--elemLayer-dark)!important;
     border-top: 3px var(--elemLayer-accent) solid!important;
 }
 div[id^="entry"]:hover{
     background-color: var(--elemLayer-accent)!important;
+}
+.waitTimeList.waitTime {
+    float: right!important;
 }
