@@ -156,3 +156,6 @@ table.details tbody tr, table.details tbody tr td, table.details tbody tr td tab
 img[src="/images/misc/proxerdonate.png"] {
     display: none!important;
 }
+img[width="100"] {
+    border-radius: 12px;
+}
