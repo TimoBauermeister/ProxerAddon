@@ -61,3 +61,6 @@ div.children[0].remove();
 // Remove donate banner ForsenCD
 let image = document.querySelector('[src="/images/misc/proxerdonate.png"]');
 image.remove();
+
+// remove report defect cause ugly
+document.getElementsByTagName("table")[2].remove();

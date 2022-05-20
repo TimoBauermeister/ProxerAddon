@@ -1,213 +1,297 @@
 :root {
-    --background-surface: #19161b;
+    --background-surface: black;
     --background-darkend: #0c0b0e;
     --background-shadow: #15111f;
-    --background-element: #1b1820;
-    --background-accent: #41354b;
+    --background-element: #242426;
+    --background-accent: #242426;
     --background-accent-transparent: #231f2750;
-    --background-brightAccent: #7b668f;
-    --elemLayer: #242231;
-    --elemLayer-dark: #191820;
+    --elemLayer: #1A1A1B;
+    --elemLayer-dark: #242426;
     --elemLayer-transparent: #16151a70;
-    --elemLayer-accent: #383247;
-    --textOnElem: #d4c8e0;
-    --textOnElemGrey:#8a8294e;
+    --elemLayer-accent: #474748;
+    --textOnElem: #D7DADC;
+    --textOnElemGrey: #8a8294e;
     --secondary-main: #045b62;
     --secondary-accent: #3d8086;
     --secondary-elem: #0d484e;
     --secondary-dark: #02393e;
-    --colorLink: #ffac68;
-    --colorLinkHover: #be4600;
-    --colorLinkVisited: #bb1515;
+    --colorLink: #D7DADC;
     --noColor: #0000;
 }
+
 a {
-    color: var(--colorLink)!important;
+    color: var(--colorLink) !important;
 }
+
+a.menu {
+    font-weight: bold !important;
+    border: none !important;
+}
+
+a.menu.active {
+    background-color: #474748 !important;
+    color: #D7DADC !important;
+}
+
+#box-table-a, .pGridCell, .pGridTextBig, .details {
+    border: none !important;
+    border-collapse: unset !important;
+    border-spacing: unset !important;
+}
+
+.pGridCell, .pGridTextBig {
+    background-color: var(--elemLayer-dark);
+}
+
 body {
-    background-color: var(--background-surface)!important;
-    font-family: Tahoma, Verdana, Segoe, sans-serif!important; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px;
+    background-color: var(--background-surface) !important;
+    font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
 }
+
+#box-table-a th {
+    font-size: 18px !important;
+    border: none !important;
+}
+
+#box-table-a td {
+    font-size: 16px !important;font-family: Tahoma, Verdana, Segoe, sans-serif !important;
+    border: none !important;
+}
+
 #nav {
-    background-color: var(--elemLayer)!important;
+    background-color: var(--elemLayer) !important;
 }
+
 #main {
-    background-color: var(--elemLayer)!important;
+    background-color: var(--elemLayer) !important;
 }
+
 li.topmenu ul {
-    background-color: var(--elemLayer)!important;
-    border-color: var(--elemLayer-accent)!important;
+    background-color: var(--elemLayer) !important;
+    border-color: var(--elemLayer-accent) !important;
 }
+
 li.topmenu ul li:hover {
-    background-color: var(--elemLayer-accent)!important;
+    background-color: var(--elemLayer-accent) !important;
 }
+
 #notificationBubble, #loginBubble, .customBubble, .pointerBubble {
-    background-color: var(--elemLayer)!important;
-    border-color: var(--elemLayer-accent)!important;
+    background-color: var(--elemLayer) !important;
+    border-color: var(--elemLayer-accent) !important;
 }
+
 #proxerSearch1 {
-    color: var(--textOnElem)!important;
-    border: 1px var(--elemLayer-accent) solid!important;
-    background-color: var(--background-element)!important;
+    color: var(--textOnElem) !important;
+    border: 1px var(--elemLayer-accent) solid !important;
+    background-color: var(--background-element) !important;
 }
+
 #submitSearch1 {
-    cursor: pointer!important;
-    color: var(--textOnElem)!important;
-    background-color: var(--elemLayer)!important;
-    border: 2px var(--background-darkend) solid!important;
-    border-radius: 6px!important;
+    cursor: pointer !important;
+    color: var(--textOnElem) !important;
+    background-color: var(--elemLayer) !important;
+    border: 2px var(--background-darkend) solid !important;
+    border-radius: 6px !important;
 }
+
 ul#simple-navi li, ul#simple-navi-wiki li {
-    background: var(--background-element)!important;
+    background: var(--background-element) !important;
 }
+
 ul#simple-navi li a, ul#simple-navi-wiki li.active a, ul#simple-navi-wiki li a.active, ul#simple-navi-wiki li a:hover {
-    color: var(--textOnElem)!important;
-    background: var(--background-element)!important;
-    filter: none!important;
-    background-color: var(--elemLayer-accent)!important;
-    border: 1px var(--background-element) solid!important;
-    border-radius: 6px 6px 0 0!important;
+    color: var(--textOnElem) !important;
+    background: var(--background-element) !important;
+    filter: none !important;
+    background-color: var(--elemLayer-accent) !important;
+    border: 1px var(--background-element) solid !important;
+    border-radius: 6px 6px 0 0 !important;
 }
+
 ul#simple-navi li.active a {
-    background-color: var(--elemLayer)!important;
-    border-bottom: 1px var(--elemLayer) solid!important;
+    background-color: var(--elemLayer) !important;
+    border-bottom: 1px var(--elemLayer) solid !important;
 }
+
 ul#simple-navi, ul#simple-navi-wiki {
-    background: var(--background-element)!important;
-    background-color: var(--elemLayer)!important;
+    background: var(--background-element) !important;
+    background-color: var(--elemLayer) !important;
 }
+
 ul#simple-navi li a:hover {
-    background-color: var(--background-accent)!important;
-    border-bottom: 1px var(--elemLayer-accent) solid!important;
+    background-color: var(--background-accent) !important;
+    border-bottom: 1px var(--elemLayer-accent) solid !important;
 }
+
 ul#simple-navi li.active a:hover {
-    border-bottom: 1px var(--elemLayer) solid!important;
+    border-bottom: 1px var(--elemLayer) solid !important;
 }
+
 ul#simple-navi, ul#simple-navi-wiki {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
+
 /*Chapter tables*/
 div#contentList table tbody tr td tr th {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
-div#contentList table tbody tr *{
-    background-color: var(--background-element)!important;
+
+div#contentList table tbody tr * {
+    background-color: var(--background-element) !important;
 }
+
 div#contentList table tbody tr td {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
+
 div#contentList table tbody tr:nth-child(2n) * {
-    background-color: var(--background-accent)!important;
+    background-color: var(--background-accent) !important;
 }
+
 tr td table tbody tr * {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
+
 span.hreview-aggregate table tr td table {
-    background-color: var(--background-accent)!important;
+    background-color: var(--background-accent) !important;
 }
-span.hreview-aggregate table tr td table tbody tr td{
-    background-color: var(--background-element)!important;
+
+span.hreview-aggregate table tr td table tbody tr td {
+    background-color: var(--background-element) !important;
 }
+
 /*profile Anime/Manga tables*/
-#box-table-a tbody tr *{
-    background-color: var(--noColor)!important;
-    color: var(--colorLink)!important;
+#box-table-a tbody tr * {
+    background-color: var(--noColor) !important;
+    color: var(--colorLink) !important;
 }
+
 #box-table-a tbody tr:nth-child(2n) {
-    background-color: var(--background-accent)!important;
+    background-color: var(--background-accent) !important;
 }
-#box-table-a tbody tr *:hover {
-    color: var(--colorLinkHover)!important;
-}
-#box-table-a tbody tr:hover {
-    background-color: var(--background-element)!important;
-}
+
+/*#box-table-a tbody tr *:hover {*/
+/*    color: var(--colorLinkHover) !important;*/
+/*}*/
+
+/*#box-table-a tbody tr:hover {*/
+/*    background-color: var(--background-element) !important;*/
+/*}*/
+
 #submitSearch1:hover {
-    background-color: var(--elemLayer-accent)!important;
+    background-color: var(--elemLayer-accent) !important;
 }
+
 .searchAutocompleteBox1 {
-    background-color: var(--elemLayer-transparent)!important;
-    backdrop-filter: blur(20px)!important;
+    background-color: var(--elemLayer-transparent) !important;
+    backdrop-filter: blur(20px) !important;
 }
+
 .fastSearchEntry {
-    background-color: var(--elemLayer-transparent)!important;
-    border: 2px var(--background-accent) solid!important;
-    backdrop-filter: blur(20px)!important;
+    background-color: var(--elemLayer-transparent) !important;
+    border: 2px var(--background-accent) solid !important;
+    backdrop-filter: blur(20px) !important;
 }
-.fastSearchEntry:hover {    
-    background-color: var(--elemLayer)!important;
+
+.fastSearchEntry:hover {
+    background-color: var(--elemLayer) !important;
 }
+
 #customButtons * {
-    background-color: var(--elemLayer)!important;
+    background-color: var(--elemLayer) !important;
 }
+
 #customButtons tbody tr td a {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
-#customButtons tbody tr td a:hover {
-    color: var(--colorLinkHover)!important;
-    background-color: var(--background-accent)!important;
-}
+
+/*#customButtons tbody tr td a:hover {*/
+/*    color: var(--colorLinkHover) !important;*/
+/*    background-color: var(--background-accent) !important;*/
+/*}*/
+
 /*Comments*/
 table.details tbody tr, table.details tbody tr td, table.details tbody tr td table tbody tr td img {
-    background-color: var(--elemLayer-dark)!important;
+    background-color: var(--elemLayer-dark) !important;
 }
-.notificationList:visited {
-    color: var(--colorLinkVisited)!important;
-}
+
+/*.notificationList:visited {*/
+/*    color: var(--colorLinkVisited) !important;*/
+/*}*/
+
 img[src="/images/misc/proxerdonate.png"] {
-    display: none!important;
+    display: none !important;
 }
+
 img[width="100"] {
     border-radius: 12px;
     transition: 0.2s;
-    transform:scale(1.0);
+    transform: scale(1.0);
 }
-img[width="100"]:hover{
-    transform:scale(1.2);
+
+img[width="100"]:hover {
+    transform: scale(1.2);
 }
+
 /*Callendar I dont use but hey LOOL*/
 table.calendarTable {
-    border-top: 0px var(--noColor) solid!important;
-    background-color: var(--background-element)!important;
-    border-spacing: 14px!important;
-    width: 100%!important;
+    border-top: 0px var(--noColor) solid !important;
+    background-color: var(--background-element) !important;
+    border-spacing: 14px !important;
+    width: 100% !important;
 }
+
 table.calendarTable tbody {
-    background-color: var(--noColor)!important;
+    background-color: var(--noColor) !important;
 }
+
 table.calendarTable tbody {
-    border-collapse: separate!important;
+    border-collapse: separate !important;
 }
+
 table.calendarTable tbody td[width="150"] {
     border-radius: 16px;
 }
+
 table.calendarTable tbody td[width="150"] img {
     border-radius: 16px;
     transition: 0.2s;
-    transform:scale(1.0);
+    transform: scale(1.0);
 }
+
 table.calendarTable tbody td[width="150"] img:hover {
-    transform:scale(1.4);
+    transform: scale(1.4);
 }
+
 div.inner {
-    color: var(--textOnElem)!important;
+    color: var(--textOnElem) !important;
 }
-table.calendarTable table td a:hover {
-    color: var(--colorLinkHover)!important;
-}
+
+/*table.calendarTable table td a:hover {*/
+/*    color: var(--colorLinkHover) !important;*/
+/*}*/
+
 .headDate {
-    border-color: var(--background-accent)!important;
+    border-color: var(--background-accent) !important;
 }
+
 .calendarHeadNav table {
-    background-color: var(--background-element)!important;
+    background-color: var(--background-element) !important;
 }
-div[id^="entry"]{
-    background-color: var(--elemLayer-dark)!important;
-    border-top: 3px var(--elemLayer-accent) solid!important;
+
+div[id^="entry"] {
+    background-color: var(--elemLayer-dark) !important;
+    border-top: 3px var(--elemLayer-accent) solid !important;
 }
-div[id^="entry"]:hover{
-    background-color: var(--elemLayer-accent)!important;
+
+div[id^="entry"]:hover {
+    background-color: var(--elemLayer-accent) !important;
 }
+
 .waitTimeList.waitTime {
-    float: right!important;
+    float: right !important;
 }
