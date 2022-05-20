@@ -19,6 +19,10 @@
     --noColor: #0000;
 }
 
+#simple-navi li {
+    margin-top: 0 !important;
+}
+
 a {
     color: var(--colorLink) !important;
 }
@@ -31,6 +35,10 @@ a.menu {
 a.menu.active {
     background-color: #474748 !important;
     color: #D7DADC !important;
+}
+
+#box-table-a {
+    max-width: unset !important;
 }
 
 #box-table-a, .pGridCell, .pGridTextBig, .details {
