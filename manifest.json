@@ -20,6 +20,15 @@
         },
         {
             "js": [
+                "home.js"
+            ],
+            "matches": [
+                "*://*.proxer.me/",
+                "*://*.proxer.me/#top/"
+            ]
+        },
+        {
+            "js": [
                 "content-manga.js"
             ],
             "matches": [

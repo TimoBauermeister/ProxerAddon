@@ -50,7 +50,7 @@ tr.insertCell();
 
 for (let i = 0; i < button_array.length; i++) {
     let td = tr.insertCell();
-    if(button_array[i] != undefined || button_array[i] != null) {
+    if(button_array[i] !== undefined || button_array[i] != null) {
         td.appendChild(button_array[i]);
     }
 }
