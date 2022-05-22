@@ -254,6 +254,20 @@ img[width="100"]:hover {
     transform: scale(1.2);
 }
 
+.ui-tooltip, div.ui-tooltip.ui-widget, .ui-widget.ui-corner-all, .ui-widget-content, div[role="tooltip"] {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-color: var(--secondary-accent) !important;
+    border-radius: 10px !important;
+}
+
+.ui-tooltip-content {
+    background-color: var(--background-element) !important;
+    color: var(--textOnElem) !important;
+    padding: 5px !important;
+    border-radius: 8px !important;
+}
+
 /*Callendar I dont use but hey LOOL*/
 table.calendarTable {
     border-top: 0px var(--noColor) solid !important;
