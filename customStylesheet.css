@@ -30,6 +30,15 @@ a {
 a.menu {
     font-weight: bold !important;
     border: none !important;
+    background-color: #333333 !important;
+}
+
+.message {
+    background-color: var(--background-element)!important;
+}
+
+a.menu:hover {
+    background-color: #565657 !important;
 }
 
 a.menu.active {
