@@ -347,3 +347,7 @@ div[id^="entry"]:hover {
 .waitTimeList.waitTime {
     float: right !important;
 }
+
+.colorbox_gray {
+    background-color: var(--background-element) !important;
+}
