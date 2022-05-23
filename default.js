@@ -6,7 +6,7 @@ window.onload = function() {
 
     let observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
-            if (oldHref !== document.location.href) {
+            if (oldHref !== document.location.href && !document.location.href.includes("proxer.me/read/")) { // reload bad on manga
                 oldHref = document.location.href;
                 reload();
             }

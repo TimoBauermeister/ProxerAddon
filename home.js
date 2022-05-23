@@ -1,6 +1,6 @@
 let h1 = document.createElement("h1");
 h1.textContent = 'Chronik: ';
-
+try {
 const topElement = document.getElementsByTagName("table")[0].children[0].children[0].children[0];
 
 if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari, SeaMonkey
@@ -23,10 +23,18 @@ xmlhttp.onreadystatechange = function () {
         table.style.marginBottom = '50px';
         document.getElementsByClassName("inner")[0].prepend(table)
         document.getElementsByClassName("inner")[0].prepend(h1);
-
+        // trigger tooltip function of proxer to get images
+        var s = document.createElement('script');
+        s.src = chrome.runtime.getURL('tooltip.js');
+        s.onload = function() {
+            this.remove();
+        };
+        (document.head || document.documentElement).appendChild(s);
     }
 }
 
 xmlhttp.open("GET", 'https://proxer.me/ucp?s=history', false);
 xmlhttp.send();
-
+} catch (error) {
+    console.log(error);
+}

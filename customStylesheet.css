@@ -159,14 +159,19 @@ div#contentList table tbody tr td tr th {
 
 div#contentList table tbody tr * {
     background-color: var(--background-element) !important;
+    border-spacing: 0px !important;
+    -webkit-border-horizontal-spacing: 0px !important;
+    -webkit-border-vertical-spacing: 0px !important;
 }
 
 div#contentList table tbody tr td {
     background-color: var(--background-element) !important;
+    border-color: var(--elemLayer) !important;
 }
 
 div#contentList table tbody tr:nth-child(2n) * {
-    background-color: var(--background-accent) !important;
+    background-color: var(--elemLayer) !important;
+    border-color: var(--elemLayer) !important;
 }
 
 tr td table tbody tr * {
@@ -182,7 +187,7 @@ span.hreview-aggregate table tr td table tbody tr td {
 }
 
 /*profile Anime/Manga tables*/
-#box-table-a tbody tr * {
+#box-table-a tbody tr *:not(option):not(select) {
     background-color: var(--noColor) !important;
     color: var(--colorLink) !important;
 }
@@ -240,8 +245,12 @@ table.details tbody tr, table.details tbody tr td, table.details tbody tr td tab
 /*    color: var(--colorLinkVisited) !important;*/
 /*}*/
 
-img[src="/images/misc/proxerdonate.png"] {
+img[src^="/images/misc/proxerdonate"] {
     display: none !important;
+}
+
+img[style="width:200px; height:280px;"] {
+    border-radius: 8px;
 }
 
 img[width="100"] {
@@ -255,8 +264,8 @@ img[width="100"]:hover {
 }
 
 .ui-tooltip, div.ui-tooltip.ui-widget, .ui-widget.ui-corner-all, .ui-widget-content, div[role="tooltip"] {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0px !important;
+    margin: 0px !important;
     border-color: var(--secondary-accent) !important;
     border-radius: 10px !important;
 }
@@ -265,7 +274,19 @@ img[width="100"]:hover {
     background-color: var(--background-element) !important;
     color: var(--textOnElem) !important;
     padding: 5px !important;
+    margin: 0 !important;
+    border: 0px var(--noColor) solid !important;
     border-radius: 8px !important;
+}
+
+.ui-tooltip-content img {
+    position: relative !important;
+    top: 2px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px var(--noColor) solid !important;
+    border-radius: 8px !important;
+    transform: scale(1.05);
 }
 
 /*Callendar I dont use but hey LOOL*/
