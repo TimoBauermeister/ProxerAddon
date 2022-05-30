@@ -8,13 +8,14 @@ setTimeout(() => {
     var detailAndEpisodes = document.getElementById("simple-navi").getElementsByTagName("A");
     var nextHref = "";
     for(let elem of naechste) {
-        console.log(elem.textContent);
         if(elem.textContent.includes("Nächste") && !elem.textContent.includes("Watchlist")) {
             nextHref = elem.href;
-            elem.remove();
         }
     }
     for(let elem of navBtns) {
+        if(elem.textContent.includes("Nächste") && !elem.textContent.includes("Watchlist")) {
+            nextHref = elem.href;
+        }
         if(elem.textContent.includes("Watchlist")) {
             if(elem.textContent.includes("Nächste")) {
                 elem.textContent = "Nächste und abhaken >";

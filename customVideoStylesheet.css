@@ -2,6 +2,7 @@
 #plyr, .plyr audio, .plyr video, #player_code, .plyr--video {
     height: 99vh !important;
     width: 99vw !important;
+    z-index: 1;
 }
 
 #psplayercontrols {

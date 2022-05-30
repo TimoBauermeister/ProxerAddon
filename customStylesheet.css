@@ -33,6 +33,11 @@ a.menu {
     background-color: #333333 !important;
 }
 
+#messages .message, #messages {
+    z-index: 6 !important;
+    user-select: none;
+}
+
 .message {
     background-color: var(--background-element)!important;
 }
