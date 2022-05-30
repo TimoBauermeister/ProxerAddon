@@ -56,11 +56,34 @@
             "matches": [
                 "*://proxer.me/calendar*"
             ]
+        },
+        {
+            "css": [
+                "customVideoStylesheet.css"
+            ],
+            "matches": [
+                "*://*.proxer.me/watch/*/*/*"
+            ],
+            "js": [
+                "moveOverlay.js"
+            ]
+        },
+        {
+            "css": [
+                "customVideoStylesheet.css"
+            ],
+            "js": [
+                "video.js"
+            ],
+            "matches": [
+                "*://stream.proxer.me/*"
+            ],
+            "all_frames":true
         }
     ],
-    "name": "Proxer - Quality Of Life",
+    "name": "Proxer Plus",
     "description": "Make your life on proxer more pleasant!",
-    "version": "0.6.3",
+    "version": "0.7.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"
@@ -69,7 +92,7 @@
         "storage"
     ],
     "web_accessible_resources": [{
-        "resources": ["tooltip.js"],
+        "resources": ["tooltip.js", "customVideoStylesheet.css"],
         "matches": ["<all_urls>"]
       }],
     "action": {

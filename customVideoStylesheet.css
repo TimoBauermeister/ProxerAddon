@@ -1,0 +1,126 @@
+
+#plyr, .plyr audio, .plyr video, #player_code, .plyr--video {
+    height: 99vh !important;
+    width: 99vw !important;
+}
+
+#psplayercontrols {
+    background-color: black;
+    font-family: sans-serif;
+    font-size: 10px;
+    opacity: 0.5;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    color: white;
+
+}
+
+#psplayercontrols a {
+    color: white;
+    text-decoration:none;
+}
+
+.video_fw_info {
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    color: #FFF;
+    display: none;
+    margin: 30px 15px;
+}
+
+.video_fw_info a {
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+    color: #FFF;
+}
+
+iframe[src^="https://stream.proxer.me/"] {
+    position: absolute;
+    z-index: 1 !important;
+    top: 40px !important;
+    left: 0px !important;
+    height: calc(100vh - 40px) !important;
+    width: calc(100vw - 0px) !important;
+    overflow: visible !important;
+}
+
+#wContainer tbody tr td.wMirror, #customButtons {
+    opacity: 0 !important;
+    z-index: 0 !important;
+}
+
+#topButtonMenu {
+    opacity: 0;
+    position: fixed !important;
+    z-index: 2 !important;
+    top: 40px !important;
+    left: 0px !important;
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    padding: 12px !important;
+    height: 46px !important;
+    background-color: #1A1A1B !important;
+    overflow: visible !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-content: flex-start !important;
+    gap: 6px
+}
+
+#topButtonMenu:hover {
+    opacity: 0.92;    
+    transition: opacity 0.2s ease-in;
+}
+
+#topButtonMenu a:not(.changeMirror), #topButtonMenu {
+    display: inline;
+    float: none;
+    line-height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 3px;
+    vertical-align: middle !important;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#topButtonMenu a[href^="/watch/"], #topButtonMenu a.reminder {
+    flex-grow: 2;
+}
+
+#topButtonMenu a[href^="/info/"] {
+    background: rgb(51, 51, 51);
+    border-radius: 6px;
+}
+
+#topButtonMenu a[href^="/info/"]:hover {
+    background: rgb(86, 86, 87);
+}
+
+#topButtonMenu a img {
+    flex-grow: 0;
+    min-width: 30px !important;
+    max-width: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+}
+
+#psplayercontrols {
+    opacity: 0 !important;
+    bottom: 0px !important;
+    top: auto !important;
+}
+#psplayercontrols:hover {
+    opacity: 0.3 !important;    
+    transition: opacity 0.2s ease-in;
+}
+ul#simple-navi li a[href^="/info/"] {
+    position: fixed !important;
+    z-index: 6 !important;
+    top: 0px !important;
+    left: 0px !important;
+    height: 40px !important;
+    padding: 0px !important;
+    text-align: center !important;
+    line-height: 40px !important;
+    width: 120px !important;
+}
