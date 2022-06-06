@@ -1,8 +1,22 @@
 
 #plyr, .plyr audio, .plyr video, #player_code, .plyr--video {
-    height: 99vh !important;
-    width: 99vw !important;
+    height: 100vh !important;
+    width: 100vw !important;
     z-index: 1;
+}
+
+iframe {
+    height: 100vh !important;
+    width: 100vw !important;
+    overflow: visible !important;
+    position: absolute !important;
+    top: 40px !important;
+    left: 0px !important;
+    z-index: 2 !important;
+}
+
+#reportStream {
+    display: none !important;
 }
 
 #psplayercontrols {
@@ -54,12 +68,12 @@ iframe[src^="https://stream.proxer.me/"] {
     position: fixed !important;
     z-index: 2 !important;
     top: 40px !important;
+    pointer-events: auto !important;
     left: 0px !important;
     width: calc(100% - 24px) !important;
     max-width: calc(100% - 24px) !important;
     padding: 12px !important;
-    height: 46px !important;
-    background-color: #1A1A1B !important;
+    height: calc(40px) !important;
     overflow: visible !important;
     display: flex !important;
     justify-content: center !important;
@@ -72,7 +86,7 @@ iframe[src^="https://stream.proxer.me/"] {
     transition: opacity 0.2s ease-in;
 }
 
-#topButtonMenu a:not(.changeMirror), #topButtonMenu {
+#topButtonMenu a:not(.changeMirror) {
     display: inline;
     float: none;
     line-height: 40px;
@@ -95,6 +109,11 @@ iframe[src^="https://stream.proxer.me/"] {
 
 #topButtonMenu a[href^="/info/"]:hover {
     background: rgb(86, 86, 87);
+}
+
+#topButtonMenu a.changeMirror {
+    min-height: 35px !important;
+    max-height: 35px !important;
 }
 
 #topButtonMenu a img {
@@ -124,4 +143,14 @@ ul#simple-navi li a[href^="/info/"] {
     text-align: center !important;
     line-height: 40px !important;
     width: 120px !important;
+}
+
+span.wName {
+    line-height: 40px !important;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    height: 0px !important;
+    width: 0px !important;
 }

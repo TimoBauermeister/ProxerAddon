@@ -56,7 +56,12 @@ setTimeout(() => {
 
     divNewButtonsTop.prepend(document.getElementsByClassName("wName")[0]);
     document.body.appendChild(divNewButtonsTop);
+
+    setTimeout(() => {
+        document.getElementsByTagName("IFRAME")[0].addEventListener("mousemove", transitionIn(divNewButtonsTop));
+    }, 3000);
 }, 5);
+
 
 function getHREF() {
     let href_array = window.location.pathname.split("/");
@@ -74,4 +79,11 @@ function getHREF() {
         }
     }
     return href;
+}
+
+function transitionIn(toTransition) {
+    toTransition.setAttribute("class", "transitionIn");
+    setTimeout(() => {
+        toTransition.setAttribute("class", "");
+    }, 1000);
 }
