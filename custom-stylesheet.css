@@ -250,9 +250,9 @@ table.details tbody tr, table.details tbody tr td, table.details tbody tr td tab
 /*    color: var(--colorLinkVisited) !important;*/
 /*}*/
 
-img[src^="/images/misc/proxerdonate"] {
-    display: none !important;
-}
+/*img[src^="/images/misc/proxerdonate"] {*/
+/*    display: none !important;*/
+/*}*/
 
 img[style="width:200px; height:280px;"] {
     border-radius: 8px;

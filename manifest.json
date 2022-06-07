@@ -12,7 +12,7 @@
         },
         {
             "css": [
-                "customStylesheet.css"
+                "custom-stylesheet.css"
             ],
             "js": [
                 "default.js"
@@ -62,12 +62,12 @@
                 "*://*.proxer.me/watch/*/*/*"
             ],
             "js": [
-                "moveOverlay.js"
+                "content-anime-theater.js"
             ]
         },
         {
             "js": [
-                "video.js"
+                "content-anime-video.js"
             ],
             "matches": [
                 "*://stream.proxer.me/*"
@@ -77,7 +77,7 @@
     ],
     "name": "Proxer Plus",
     "description": "Make your life on proxer more pleasant!",
-    "version": "0.7.2",
+    "version": "1.0.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"
@@ -86,7 +86,7 @@
         "storage"
     ],
     "web_accessible_resources": [{
-        "resources": ["tooltip.js", "customVideoStylesheet.css"],
+        "resources": ["home-tooltip.js", "content-anime-theater-stylesheet.css"],
         "matches": ["<all_urls>"]
       }],
     "action": {
