@@ -24,7 +24,7 @@ xmlhttp.onreadystatechange = function () {
         document.getElementsByClassName("inner")[0].prepend(table)
         document.getElementsByClassName("inner")[0].prepend(h1);
         // trigger tooltip function of proxer to get images
-        var s = document.createElement('script');
+        let s = document.createElement('script');
         s.src = chrome.runtime.getURL('tooltip.js');
         s.onload = function() {
             this.remove();

@@ -1,31 +1,32 @@
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="popup.css">
+    <title></title>
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <span>Last Episode added to watchlist: </span>
-            <a id="linkAnime"></a>
-        </div>
-        <div class="margin-top">
-            <span>Last Chapter added to watchlist: </span>
-            <a id="linkManga"></a>
-        </div>
-        <div>
-            <span class="settingContainer">
-                <lable class="toggle">
-                    <input type="checkbox" id="inputEnableTheaterMode">
-                    <span class="slider"></span>
-                    <span class="labels" data-on="ON" data-off="OFF"></span>
-                </lable>
-                <div class="textForSetting">Enable Theater Mode: </div>
-            </span>
-        </div>
+<div class="container">
+    <div>
+        <span>Last Episode added to watchlist: </span>
+        <a id="linkAnime"></a>
     </div>
-    <script src="popup.js"></script>
+    <div class="margin-top">
+        <span>Last Chapter added to watchlist: </span>
+        <a id="linkManga"></a>
+    </div>
+    <div class="margin-top">
+        <div class="textForSetting theaterElement">Enable Theater Mode:</div>
+        <span class="settingContainer theaterElement">
+            <label class="toggle">
+                <input type="checkbox" id="inputEnableTheaterMode"/>
+                <span class="slider"></span>
+                <span class="labels" data-on="ON" data-off="OFF"></span>
+            </label>
+        </span>
+    </div>
+</div>
+<script src="popup.js"></script>
 </body>
 
 </html>

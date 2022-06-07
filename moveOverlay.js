@@ -1,21 +1,19 @@
-chrome.storage.sync.set({ 'theaterMode': false }, function () {
-});
 chrome.storage.sync.get(['theaterMode'], function (result) {
-    if(result) {
-        var link = document.createElement("link");
+    if(result && result['theaterMode']) {
+        let link = document.createElement("link");
         link.href = chrome.runtime.getURL('customVideoStylesheet.css');
         link.type = "text/css";
         link.rel = "stylesheet";
         document.documentElement.insertBefore(link, document.documentElement.firstChild);
         setTimeout(() => {
-            var divNewButtonsTop = document.createElement("div");
+            let divNewButtonsTop = document.createElement("div");
             divNewButtonsTop.setAttribute("id", "topButtonMenu");
 
-            var navBtns = document.getElementsByClassName("no_details")[0].getElementsByTagName("A");
-            var naechste = document.getElementsByClassName("no_details")[0].getElementsByClassName("menu");
-            var streamBtns = document.getElementsByClassName("wMirror")[0].getElementsByClassName("menu");
-            var detailAndEpisodes = document.getElementById("simple-navi").getElementsByTagName("A");
-            var nextHref = "";
+            let navBtns = document.getElementsByClassName("no_details")[0].getElementsByTagName("A");
+            let naechste = document.getElementsByClassName("no_details")[0].getElementsByClassName("menu");
+            let streamBtns = document.getElementsByClassName("wMirror")[0].getElementsByClassName("menu");
+            let detailAndEpisodes = document.getElementById("simple-navi").getElementsByTagName("A");
+            let nextHref = "";
             for(let elem of naechste) {
                 if(elem.textContent.includes("Nächste") && !elem.textContent.includes("Watchlist")) {
                     nextHref = elem.href;
@@ -41,7 +39,7 @@ chrome.storage.sync.get(['theaterMode'], function (result) {
                         
                             chrome.storage.sync.set({ 'lastPageTitleAnime': lastPageTitle }, function () {
                             });
-                            if(nextHref != "") {
+                            if(nextHref !== "") {
                                 location.href = nextHref;
                             }
                         });
@@ -78,13 +76,13 @@ function getHREF() {
     let href = "";
 
     for (let i = 0; i < href_array.length; i++) {
-        if (i == 0) {
+        if (i === 0) {
             href += href_array[i];
         }
-        if (i != href_array.length - 2 && i != 0) {
+        if (i !== href_array.length - 2 && i !== 0) {
             href += "/" + href_array[i];
         }
-        if (i == href_array.length - 2) {
+        if (i === href_array.length - 2) {
             href += "/" + (parseInt(href_array[i]) + 1);
         }
     }

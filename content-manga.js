@@ -4,13 +4,13 @@ let href_array = window.location.pathname.split("/");
 let href = "";
 
 for (let i = 0; i < href_array.length; i++) {
-    if (i == 0) {
+    if (i === 0) {
         href += href_array[i];
     }
-    if (i != href_array.length - 2 && i != 0) {
+    if (i !== href_array.length - 2 && i !== 0) {
         href += "/" + href_array[i];
     }
-    if (i == href_array.length - 2) {
+    if (i === href_array.length - 2) {
         href += "/" + (parseInt(href_array[i]) + 1);
     }
 }

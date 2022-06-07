@@ -42,7 +42,7 @@ for(let calendarEntry of document.getElementsByClassName("calendarTable")) {
     calendarEntry.getElementsByTagName("table")[0].lastChild.previousElementSibling.appendChild(descriptionContainer); // deine Schwester
     
     descriptionTd.onclick = function () {
-        if(descriptionContainer.textContent == "hier draufhauen um Beschreibung zu laden") {
+        if(descriptionContainer.textContent === "hier draufhauen um Beschreibung zu laden") {
             descriptionTd.textContent = "Laden..."; // nein ich werde nicht richtig Deutsch schreiben
             var xmlr = new XMLHttpRequest();
             xmlr.responseType = "document";
@@ -50,11 +50,11 @@ for(let calendarEntry of document.getElementsByClassName("calendarTable")) {
                 xmlr.open("GET",calendarEntry.getElementsByClassName("titelRow")[0].firstChild.nextElementSibling.firstChild.nextElementSibling.href,true);
                 xmlr.send();
                 xmlr.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.response != null) {
-                        if( this.response.getElementsByClassName("details")[0] != undefined && /* YES THIS IS VERY CLEAN :( */
-                            this.response.getElementsByClassName("details")[0].lastChild != undefined &&
-                            this.response.getElementsByClassName("details")[0].lastChild.lastChild != undefined &&
-                            this.response.getElementsByClassName("details")[0].lastChild.lastChild.previousElementSibling != undefined) {
+                    if (this.readyState === 4 && this.response != null) {
+                        if( this.response.getElementsByClassName("details")[0] !== undefined && /* YES THIS IS VERY CLEAN :( */
+                            this.response.getElementsByClassName("details")[0].lastChild !== undefined &&
+                            this.response.getElementsByClassName("details")[0].lastChild.lastChild !== undefined &&
+                            this.response.getElementsByClassName("details")[0].lastChild.lastChild.previousElementSibling !== undefined) {
                             descriptionTd.textContent = this.response.getElementsByClassName("details")[0].lastChild.lastChild.previousElementSibling.textContent;
                         }
                     }

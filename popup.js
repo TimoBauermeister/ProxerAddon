@@ -6,6 +6,15 @@ let titleManga = 'No link has been set yet :/';
 let linkManga = 'No link has been set yet :/'
 let aManga = document.getElementById("linkManga");
 
+let checkbox = document.getElementById('inputEnableTheaterMode');
+checkbox.addEventListener("click", theaterModeToggle);
+
+chrome.storage.sync.get(['theaterMode'], function (result) {
+    if (result) {
+        checkbox.checked = result['theaterMode'];
+    }
+});
+
 aAnime.onclick = function() {
     chrome.tabs.create({active: true, url: linkAnime});
 }
@@ -30,3 +39,8 @@ chrome.storage.sync.get(['lastPageTitleManga'], function (result) {
     titleManga = result.lastPageTitleManga ? result.lastPageTitleManga : 'No link has been set yet :/';
     aManga.innerHTML = titleManga;
 });
+
+function theaterModeToggle() {
+    chrome.storage.sync.set({ 'theaterMode': checkbox.checked }, function () {
+    });
+}
