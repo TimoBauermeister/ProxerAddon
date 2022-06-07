@@ -58,9 +58,6 @@
             ]
         },
         {
-            "css": [
-                "customVideoStylesheet.css"
-            ],
             "matches": [
                 "*://*.proxer.me/watch/*/*/*"
             ],
@@ -69,9 +66,6 @@
             ]
         },
         {
-            "css": [
-                "customVideoStylesheet.css"
-            ],
             "js": [
                 "video.js"
             ],
@@ -83,7 +77,7 @@
     ],
     "name": "Proxer Plus",
     "description": "Make your life on proxer more pleasant!",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"
