@@ -250,22 +250,42 @@ table.details tbody tr, table.details tbody tr td, table.details tbody tr td tab
 /*    color: var(--colorLinkVisited) !important;*/
 /*}*/
 
-/*img[src^="/images/misc/proxerdonate"] {*/
-/*    display: none !important;*/
-/*}*/
+img[src^="/images/misc/proxerdonate"] {
+    display: none !important;
+}
 
 img[style="width:200px; height:280px;"] {
     border-radius: 8px;
 }
 
 img[width="100"] {
+    z-index: 1;
     border-radius: 12px;
     transition: 0.2s;
     transform: scale(1.0);
 }
 
 img[width="100"]:hover {
-    transform: scale(1.2);
+    z-index: 2;
+    transform: scale(2);
+    position: relative;
+}
+
+img[width="150"] {
+    z-index: 1;
+    border-radius: 12px;
+    transition: 0.2s;
+    transform: scale(1.0);
+}
+
+img[width="150"]:hover {
+    z-index: 2;
+    transform: scale(2);
+    position: relative;
+}
+
+.news_image {
+    border-radius: 6px;
 }
 
 .ui-tooltip, div.ui-tooltip.ui-widget, .ui-widget.ui-corner-all, .ui-widget-content, div[role="tooltip"] {
@@ -315,13 +335,16 @@ table.calendarTable tbody td[width="150"] {
 }
 
 table.calendarTable tbody td[width="150"] img {
+    z-index: 1;
     border-radius: 16px;
     transition: 0.2s;
     transform: scale(1.0);
 }
 
 table.calendarTable tbody td[width="150"] img:hover {
-    transform: scale(1.4);
+    z-index: 2;
+    transform: scale(1.55);
+    position: relative;
 }
 
 div.inner {
