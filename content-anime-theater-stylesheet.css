@@ -65,6 +65,7 @@ iframe[src^="https://stream.proxer.me/"] {
 
 #topButtonMenu {
     opacity: 0;
+    background-color: #212121;
     position: fixed !important;
     z-index: 2 !important;
     top: 40px !important;

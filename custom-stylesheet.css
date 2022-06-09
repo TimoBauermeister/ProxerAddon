@@ -379,3 +379,7 @@ div[id^="entry"]:hover {
 .colorbox_gray {
     background-color: var(--background-element) !important;
 }
+
+font[style="font-size:1px;"] {
+    font-size: 38px !important;
+}
