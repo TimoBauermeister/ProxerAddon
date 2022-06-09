@@ -1,0 +1,220 @@
+:root {
+    --noColor: #0000;
+    --body-background: #000;
+    --main-color: #1A1A1B;
+    
+    --textOnElem: #D7DADC;
+    --colorLink: #b3d0e4;
+}
+body {
+    background-color: var(--body-background);
+    color: #ccc
+}
+
+a {
+    color: var(--colorLink);
+    text-decoration: none
+}
+
+a:hover {
+    color: #ff0
+}
+
+#wrapper {
+    background: no-repeat scroll 50% 40px transparent
+}
+
+#nav {
+    border-bottom: 1px solid #5e5e5e;
+    background-color: #1A1A1B
+}
+
+#nav a {
+    color: #fff
+}
+
+.topmenu ul {
+    background-color: #1A1A1B;
+    background-image: url(https://proxer.me/templates/proxer14/images/black-trans.png);
+    background-position: center top;
+    background-repeat: repeat-x;
+    border: 1px solid #5e5e5e;
+    border-top: 0
+}
+
+#loginNav.notLoggedIn {
+    background-image: url(https://proxer.me/templates/proxer14/images/key.png)
+}
+
+#newsNav {
+    background-image: url(https://proxer.me/templates/proxer14/images/notification_0.png)
+}
+
+#miscNav {
+    background-image: url(https://proxer.me/templates/proxer14/images/notification_4.png)
+}
+
+#messageNav {
+    background-image: url(https://proxer.me/templates/proxer14/images/notification_2.png)
+}
+
+#requestNav {
+    background-image: url(https://proxer.me/templates/proxer14/images/notification_1.png)
+}
+
+#searchNav {
+    background-image: url(https://proxer.me/templates/proxer14/images/notification_5.png)
+}
+
+#main {
+    background-color: #5e5e5e;
+    border: 1px solid #1A1A1B;
+    border-radius: 6px
+}
+
+.moduletable {
+    background-color: #5e5e5e;
+    border: 1px solid #1A1A1B;
+    border-radius: 6px
+}
+
+ul#simple-navi,ul#simple-navi-wiki {
+    background-color: #1A1A1B;
+    border-radius: 6px 6px 0 0;
+    font-weight: 700
+}
+
+ul#simple-navi li a,ul#simple-navi-wiki li a {
+    border-radius: 6px 6px 0 0
+}
+
+ul#simple-navi li a,ul#simple-navi-wiki li.active a,ul#simple-navi-wiki li a.active,ul#simple-navi-wiki li a:hover {
+   }
+
+ul#simple-navi-wiki li a,ul#simple-navi li.active a,ul#simple-navi li a.active,ul#simple-navi li a:hover {
+    }
+
+ul#simple-navi li a, ul#simple-navi-wiki li.active a, ul#simple-navi-wiki li a.active, ul#simple-navi-wiki li a:hover {
+    color: var(--textOnElem);
+    background: var(--background-element);
+    filter: none;
+    background-color: var(--elemLayer-accent);
+    border: 1px var(--background-element) solid;
+    border-radius: 6px 6px 0 0;
+}
+
+.fastSearchEntry {
+    background: #5e5e5e
+}
+
+.fastSearchEntry:hover,.fastSearchSelected {
+    border: 1px solid #ccc
+}
+
+.searchBox {
+    background: #444
+}
+
+#notificationBubble,#loginBubble,.customBubble,.pointerBubble {
+    background: repeat scroll 0 0 #5e5e5e;
+    border: 1px solid #fff
+}
+
+#notificationBubble:after,#loginBubble:after,.pointerBubble:after {
+    border-color: #5e5e5e transparent
+}
+
+a.menu {
+    border: 1px solid #fff;
+    color: #fff
+}
+
+a.menu.active,a.menu:hover {
+    background-color: #fff;
+    color: #000
+}
+
+#box-table-a {
+    text-align: left;
+    border-collapse: collapse
+}
+
+#box-table-a tr {
+    border: 1px solid;
+    height: 30px
+}
+
+#box-table-a th {
+    background: #1A1A1B;
+    border-bottom: 1px solid #fff;
+    color: #fff
+}
+
+#box-table-a td {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: #5e5e5e
+}
+
+#box-table-a tr:hover td {
+    background: #fff;
+    color: #1A1A1B
+}
+
+#box-table-a tr:hover a {
+    color: #000
+}
+
+#messages .message {
+    background: repeat scroll 0 0 #5e5e5e;
+    text-shadow: 1px 1px 0 #000;
+    border: 1px solid #fff;
+    box-shadow: 5px 5px 25px #e7e7e7
+}
+
+#chat {
+    border-color: #1A1A1B;
+    background-color: #5e5e5e
+}
+
+.details td {
+    background-color: #1A1A1B
+}
+
+.scrollable.default-skin .scroll-bar .thumb {
+    background-color: #fff
+}
+
+.pInfo {
+    border: 1px solid;
+    background-color: #1A1A1B;
+    color: #fff
+}
+
+#chatapp_sidebar {
+    border-left: 1px solid;
+    border-color: #1A1A1B;
+    background-color: #5e5e5e
+}
+
+#chatapp_sidebarclose {
+    border-top: 1px solid;
+    border-color: #1A1A1B
+}
+
+#chatapp_toggle {
+    border: 1px solid;
+    border-color: #1A1A1B;
+    background-color: #5e5e5e
+}
+
+.chatapp_room {
+    border: 1px solid;
+    border-color: #1A1A1B;
+    background-color: #5e5e5e
+}
+
+.chatapp_roomtitle {
+    border-bottom: 1px solid;
+    border-color: #1A1A1B
+}

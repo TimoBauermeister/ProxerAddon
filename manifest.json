@@ -77,7 +77,7 @@
     ],
     "name": "Proxer Plus",
     "description": "Make your life on proxer more pleasant!",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"
@@ -86,7 +86,7 @@
         "storage"
     ],
     "web_accessible_resources": [{
-        "resources": ["home-tooltip.js", "content-anime-theater-stylesheet.css"],
+        "resources": ["home-tooltip.js", "content-anime-theater-stylesheet.css", "grey-override-stylesheet.css"],
         "matches": ["<all_urls>"]
       }],
     "action": {

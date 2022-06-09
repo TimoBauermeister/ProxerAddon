@@ -15,7 +15,7 @@
     --secondary-accent: #3d8086;
     --secondary-elem: #0d484e;
     --secondary-dark: #02393e;
-    --colorLink: #D7DADC;
+    --colorLink: #b3d0e4;
     --noColor: #0000;
 }
 
@@ -194,7 +194,6 @@ span.hreview-aggregate table tr td table tbody tr td {
 /*profile Anime/Manga tables*/
 #box-table-a tbody tr *:not(option):not(select) {
     background-color: var(--noColor) !important;
-    color: var(--colorLink) !important;
 }
 
 #box-table-a tbody tr:nth-child(2n) {
@@ -258,34 +257,36 @@ img[style="width:200px; height:280px;"] {
     border-radius: 8px;
 }
 
-img[width="100"] {
+img[width="100"], img[width="150"] {
     z-index: 1;
     border-radius: 12px;
     transition: 0.2s;
     transform: scale(1.0);
 }
 
-img[width="100"]:hover {
+img[width="100"]:hover, img[width="150"]:hover {
     z-index: 2;
-    transform: scale(2);
+    transform: scale(1.85);
     position: relative;
 }
 
-img[width="150"] {
-    z-index: 1;
-    border-radius: 12px;
-    transition: 0.2s;
-    transform: scale(1.0);
-}
-
-img[width="150"]:hover {
-    z-index: 2;
-    transform: scale(2);
-    position: relative;
-}
-
-.news_image {
+.news_image, .randomImage {
     border-radius: 6px;
+}
+
+img[style="width:150px;height:210px;border: 1px solid; margin:5px;padding:5px;"] {
+    border-radius: 12px !important;
+    border-color: var(--secondary-accent) !important;
+    padding: 0px !important;
+    margin: 10px !important;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+img[style="width:150px;height:210px;border: 1px solid; margin:5px;padding:5px;"]:hover {
+    z-index: 2;
+    transform: scale(1.1);
+    position: relative;
 }
 
 .ui-tooltip, div.ui-tooltip.ui-widget, .ui-widget.ui-corner-all, .ui-widget-content, div[role="tooltip"] {
