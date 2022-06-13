@@ -12,7 +12,9 @@ function searchAndReplace() {
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
                     return;
                 } else if (link.getAttribute("href").includes("black")) {
+                    // load grey override for changes in form and color
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
+                    // create link element and override grey color scheme by changing :root
                     let rootChanger = document.createElement("link");
                     rootChanger.href = chrome.runtime.getURL('black-override-stylesheet.css');
                     rootChanger.type = "text/css";
