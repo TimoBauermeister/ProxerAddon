@@ -11,6 +11,14 @@ function searchAndReplace() {
                 if(link.getAttribute("href").includes("gray")) {
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
                     return;
+                } else if (link.getAttribute("href").includes("black")) {
+                    link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
+                    let rootChanger = document.createElement("link");
+                    rootChanger.href = chrome.runtime.getURL('black-override-stylesheet.css');
+                    rootChanger.type = "text/css";
+                    rootChanger.rel = "stylesheet";
+                    link.parentElement.appendChild(rootChanger);
+                    return;
                 }
                 // add more styles here removes load if there is no link found
                 load.remove();

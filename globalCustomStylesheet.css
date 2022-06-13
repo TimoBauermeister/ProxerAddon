@@ -113,5 +113,9 @@ font[style="font-size:1px;"] {
 
 /*custom theme color overwrite*/
 .colorbox_gray {
-    background-color: var(--element) !important;
+    background-color: #242426 !important;
+}
+
+.colorbox_black {
+    background-color: #212180 !important;
 }
