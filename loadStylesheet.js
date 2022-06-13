@@ -21,6 +21,16 @@ function searchAndReplace() {
                     rootChanger.rel = "stylesheet";
                     link.parentElement.appendChild(rootChanger);
                     return;
+                } else if (link.getAttribute("href").includes("blue")) {
+                    // load grey override for changes in form and color
+                    link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
+                    // create link element and override grey color scheme by changing :root
+                    let rootChanger = document.createElement("link");
+                    rootChanger.href = chrome.runtime.getURL('blue-override-stylesheet.css');
+                    rootChanger.type = "text/css";
+                    rootChanger.rel = "stylesheet";
+                    link.parentElement.appendChild(rootChanger);
+                    return;
                 }
                 // add more styles here removes load if there is no link found
                 load.remove();

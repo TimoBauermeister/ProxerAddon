@@ -1,0 +1,26 @@
+:root { /*Allow for custom colors ?*/
+    --noColor: #0000;
+    --body-background: #101611;
+    --element: #04621b77;
+    --element-accent: #094d09ab;
+    --element-darkend: #023e0c77;
+    --main: #124e0d77;
+    --main-accent: #3d863d77;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    height: 4px;
+    width: 12px;
+    border: 1px solid var(--element-accent);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--element-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: var(--element-darkend);
+}

@@ -44,7 +44,7 @@ a:hover {
     border-top: 0;
 }
 
-li.topmenu ul li:hover {
+li.topmenu ul li:hover:not([style="margin: 15px;"]) {
     background-color: var(--main-accent) ;
     border-radius: 3px;
 }
