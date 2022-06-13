@@ -2,6 +2,18 @@
     "author": "Hazy, eSaltcracker",
     "content_scripts": [
         {
+            "css": [
+                "globalCustomStylesheet.css"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "createLoading.js"
+            ],
+            "matches": [
+                "*://*.proxer.me/*"
+            ]
+        },
+        {
             "js": [
                 "content-anime.js"
             ],
@@ -11,9 +23,6 @@
             ]
         },
         {
-            "css": [
-                "custom-stylesheet.css"
-            ],
             "js": [
                 "default.js"
             ],

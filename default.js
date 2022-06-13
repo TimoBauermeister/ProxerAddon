@@ -1,8 +1,3 @@
-/* for(let link of document.getElementsByTagName("LINK")) {
-    if(link.getAttribute("href").includes("/templates/proxer14/css/color")) {
-        link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css")); // make it so it checks what color style is used and change stylesheet maybe change color in root? idk
-    }
-} */
 // reloads site on every route change so that custom js is loaded
 let oldHref = document.location.href;
 

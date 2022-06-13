@@ -1,0 +1,117 @@
+:root { /*root overwrite for each theme this is default*/
+    --noColor: #0000;
+    --body-background: #000;
+    --element: #242426;
+    --element-accent: #303030;
+    --element-darkend: #222222;
+    --main: #1A1A1B;
+    --main-accent: #474748;
+
+    /*secondary in case needed*/
+    --secondary: #045b62;
+    --secondary-accent: #3d8086;
+    --secondary-element: #0d484e;
+    --secondary-darkend: #02393e;
+
+    --textOnElem: #D7DADC;
+    --colorLink: #b3d0e4;
+    --colorLinkHover: #8dbbda;
+    --noColor: #0000;
+}
+
+/*Images*/
+
+img[src^="/images/misc/proxerdonate"] {
+    display: none;
+}
+
+img[style="width:200px; height:280px;"] {
+    border-radius: 8px;
+}
+
+img[width="100"], img[width="150"] {
+    z-index: 1;
+    border-radius: 12px;
+    transition: 0.2s;
+    transform: scale(1.0);
+}
+
+img[width="100"]:hover, img[width="150"]:hover {
+    z-index: 2;
+    transform: scale(1.85);
+    position: relative;
+}
+
+.news_image, .randomImage {
+    border-radius: 6px;
+}
+
+img[style="width:150px;height:210px;border: 1px solid; margin:5px;padding:5px;"] {
+    border-radius: 12px;
+    border-color: var(--secondary-accent);
+    padding: 0px;
+    margin: 10px;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+img[style="width:150px;height:210px;border: 1px solid; margin:5px;padding:5px;"]:hover {
+    z-index: 2;
+    transform: scale(1.1);
+    position: relative;
+}
+/*calendar images*/
+table.calendarTable tbody td[width="150"] {
+    border-radius: 16px;
+}
+
+table.calendarTable tbody td[width="150"] img {
+    z-index: 1;
+    border-radius: 16px;
+    transition: 0.2s;
+    transform: scale(1.0);
+}
+
+table.calendarTable tbody td[width="150"] img:hover {
+    z-index: 2;
+    transform: scale(1.55);
+    position: relative;
+}
+/*UI TOOLTIP*/
+
+.ui-tooltip, div.ui-tooltip.ui-widget, .ui-widget.ui-corner-all, .ui-widget-content, div[role="tooltip"] {
+    padding: 0px !important;
+    margin: 0px !important;
+    border-color: var(--secondary-accent) !important;
+    border-radius: 10px !important;
+}
+
+.ui-tooltip-content {
+    background-color: #242426 !important;
+    color: var(--textOnElem) !important;
+    padding: 5px !important;
+    margin: 0 !important;
+    border: 0px var(--noColor) solid !important;
+    border-radius: 8px !important;
+}
+
+.ui-tooltip-content img {
+    position: relative !important;
+    top: 2px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: 0px var(--noColor) solid !important;
+    border-radius: 8px !important;
+    transform: scale(1.05);
+}
+
+/*OTHER*/
+
+font[style="font-size:1px;"] {
+    font-size: 38px !important;
+}
+
+/*custom theme color overwrite*/
+.colorbox_gray {
+    background-color: var(--element) !important;
+}
