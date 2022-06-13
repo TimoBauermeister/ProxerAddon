@@ -73,9 +73,9 @@ chrome.storage.sync.get(['theaterMode'], function (result) {
                 divNewButtonsTop.prepend(document.getElementsByClassName("wName")[0]);
                 document.body.appendChild(divNewButtonsTop);
             }
-            setTimeout(() => {
+            /* setTimeout(() => {
                 document.getElementsByTagName("IFRAME")[0].addEventListener("mousemove", transitionIn(divNewButtonsTop));
-            }, 3000);
+            }, 3000); */
         }, 5);
     }
 });

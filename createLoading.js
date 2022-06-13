@@ -1,7 +1,7 @@
-let load = document.createElement("div");
+/* let load = document.createElement("div");
 load.id = "loadPre"
 load.style = "height:100vh; width:100vw; background-color:#000; position: fixed; top:0; left:0; z-index:99;";
-document.documentElement.appendChild(load);
+document.documentElement.appendChild(load); */
 searchAndReplace();
 
 function searchAndReplace() {
@@ -13,7 +13,7 @@ function searchAndReplace() {
                     return;
                 }
                 // add more styles here removes load if there is no link found
-                load.remove();
+                /* load.remove(); */
                 return;
             }
         }
