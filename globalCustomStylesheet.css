@@ -123,3 +123,25 @@ font[style="font-size:1px;"] {
 .colorbox_old_blue {
     background-color: #076204 !important;
 }
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    height: 4px;
+    width: 11px;
+    border: 1px solid var(--element-accent);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: var(--body-background);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: var(--element-accent);
+  border: 2px var(--body-background) solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--element-darkend);
+}

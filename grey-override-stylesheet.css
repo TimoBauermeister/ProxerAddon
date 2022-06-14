@@ -112,6 +112,7 @@ ul#simple-navi li a:active, ul#simple-navi li a:active, ul#simple-navi li.active
 
 .fastSearchEntry:hover,.fastSearchSelected {
     background: var(--element-accent);
+    border: none !important;
 }
 
 .searchBox {
@@ -130,6 +131,10 @@ ul#simple-navi li a:active, ul#simple-navi li a:active, ul#simple-navi li.active
     background-color: var(--element);
     border: 2px var(--element-darkend) solid;
     border-radius: 6px;
+}
+
+#submitSearch1:hover {
+    background-color: var(--element-accent);
 }
 
 #notificationBubble,#loginBubble,.customBubble,.pointerBubble {

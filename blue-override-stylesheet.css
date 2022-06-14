@@ -13,20 +13,3 @@ body {
   -webkit-background-size: cover !important;
   background-size: cover !important;
 }
-
-/*SCROLLBAR*/
-::-webkit-scrollbar {
-    height: 4px;
-    width: 12px;
-    border: 1px solid var(--element-accent);
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 0;
-  background: var(--element-accent);
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 0;
-  background: var(--element-darkend);
-}
