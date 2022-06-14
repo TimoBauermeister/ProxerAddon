@@ -1,11 +1,17 @@
 :root { /*Allow for custom colors ?*/
     --noColor: #0000;
     --body-background: #101611;
-    --element: #04621b77;
-    --element-accent: #094d09ab;
-    --element-darkend: #023e0c77;
-    --main: #124e0d77;
+    --element: #068325de;
+    --element-accent: #0c630cf3;
+    --element-darkend: #023e0cda;
+    --main: #124e0da6;
     --main-accent: #3d863d77;
+}
+
+body {
+  background: url("https://thumbs.gfycat.com/AncientUnselfishGoldenmantledgroundsquirrel-size_restricted.gif") no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
 }
 
 /*SCROLLBAR*/
