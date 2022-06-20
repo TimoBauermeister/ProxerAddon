@@ -122,14 +122,14 @@ iframe[src^="https://stream.proxer.me/"] {
 }
 
 #topButtonMenu a[href^="/info/"] {
-    background: rgb(51, 51, 51);
+    background: var(--element);
     border-radius: 6px;
     flex-grow: 0;
     order: 2;
 }
 
 #topButtonMenu a[href^="/info/"]:hover {
-    background: rgb(86, 86, 87);
+    background: var(--element-accent);
 }
 
 #topButtonMenu a.changeMirror {
@@ -187,6 +187,7 @@ a.menu:not(.changeMirror) {
     display: flex;
     justify-content: center !important;
     line-height: 46px !important;
+    height: 40px !important;
 }
 
 span.wLinkerText {
