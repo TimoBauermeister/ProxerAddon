@@ -110,6 +110,10 @@ table.calendarTable tbody td[width="150"] img:hover {
 font[style="font-size:1px;"] {
     font-size: 38px !important;
 }
+/*manga buy thingy*/
+.article {
+    height: 370px !important;
+}
 
 /*custom theme color overwrite*/
 .colorbox_gray {

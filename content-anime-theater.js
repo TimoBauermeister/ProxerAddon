@@ -34,7 +34,7 @@ chrome.storage.sync.get(['theaterMode'], function (result) {
                     }
                     if(elem.textContent.includes("Watchlist")) {
                         if(elem.textContent.includes("Nächste")) {
-                            elem.textContent = "Nächste und abhaken >";
+                            elem.innerHTML = "&#10004 + &rarr;";
                             elem.addEventListener("click", function () {
                                 let lastPageLink = 'https://proxer.me' + getHREF();
                                 chrome.storage.sync.set({ 'lastPageLinkAnime': lastPageLink }, function () {
@@ -56,6 +56,7 @@ chrome.storage.sync.get(['theaterMode'], function (result) {
                         }
                     } else {
                         if(elem.textContent.includes("Vorherige")) {
+                            elem.innerHTML = "&larr;";
                             divNewButtonsTop.append(elem);
                         }
                     }
@@ -65,12 +66,28 @@ chrome.storage.sync.get(['theaterMode'], function (result) {
                 for(let elem of streamBtns) {
                     divNewButtonsTop.prepend(elem);
                 }
-
+                let elen = 0;
                 for(let elem of detailAndEpisodes) {
-                    divNewButtonsTop.prepend(elem);
+                    //if(!elem.innerHTML.includes("span class=")) {
+                        elem.setAttribute("id", "navi"+elen)
+                        divNewButtonsTop.append(elem);
+                        elen++;
+                    //}
                 }
 
-                divNewButtonsTop.prepend(document.getElementsByClassName("wName")[0]);
+                let reminder = document.getElementsByClassName("menu")[1];
+                reminder.innerHTML = "&#128278;";
+                divNewButtonsTop.prepend(reminder);
+
+                let naechsteOhne = document.getElementsByClassName("menu")[1];
+                naechsteOhne.innerHTML = "&rarr;";
+                naechsteOhne.setAttribute("class","menu order6");
+                divNewButtonsTop.prepend(naechsteOhne);
+                
+
+                let textMiddle = document.getElementById("wContainer").childNodes[3].childNodes[0];
+                divNewButtonsTop.prepend(textMiddle);
+                
                 document.body.appendChild(divNewButtonsTop);
             }
             /* setTimeout(() => {

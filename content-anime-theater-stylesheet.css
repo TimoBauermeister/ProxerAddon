@@ -65,7 +65,7 @@ iframe[src^="https://stream.proxer.me/"] {
 
 #topButtonMenu {
     opacity: 0;
-    background-color: #121212;
+    background-color: var(--noColor);
     position: fixed !important;
     z-index: 2 !important;
     top: 40px !important;
@@ -74,18 +74,28 @@ iframe[src^="https://stream.proxer.me/"] {
     width: calc(100% - 24px) !important;
     max-width: calc(100% - 24px) !important;
     padding: 12px !important;
-    height: calc(40px) !important;
+    height: calc(100vh - 40px) !important;
     overflow: visible !important;
     display: flex !important;
     justify-content: center !important;
     align-content: flex-start !important;
-    gap: 6px
+    gap: 6px !important;
+    pointer-events: none !important;
+    transition: opacity 0.6s ease-out;
+    color: var(--textOnElem) !important;
+    font-size: 1.2em !important;
 }
 
 #topButtonMenu:hover {
     opacity: 0.92;    
     transition: opacity 0.2s ease-in;
 }
+
+#topButtonMenu * {
+    pointer-events: auto !important;
+    order: 4;
+}
+
 
 #topButtonMenu a:not(.changeMirror) {
     display: inline;
@@ -100,12 +110,22 @@ iframe[src^="https://stream.proxer.me/"] {
 }
 
 #topButtonMenu a[href^="/watch/"], #topButtonMenu a.reminder {
-    flex-grow: 2;
+    flex-grow: 0;
+}
+
+#topButtonMenu a.reminder {
+    order: 5;
+}
+
+#topButtonMenu a[href^="/watch/"] {
+    order: 1;
 }
 
 #topButtonMenu a[href^="/info/"] {
     background: rgb(51, 51, 51);
     border-radius: 6px;
+    flex-grow: 0;
+    order: 2;
 }
 
 #topButtonMenu a[href^="/info/"]:hover {
@@ -148,6 +168,33 @@ ul#simple-navi li a[href^="/info/"] {
 
 span.wName {
     line-height: 40px !important;
+    height: 40px !important;
+    order: 3;
+}
+
+a.menu:not(.changeMirror) {
+    font-size: 1.8em !important;
+    font-weight: 800 !important;
+    line-height: 34px !important;
+}
+
+#navi0  {
+    display: none !important;
+}
+
+#topButtonMenu tr {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center !important;
+    line-height: 46px !important;
+}
+
+span.wLinkerText {
+    display: none !important;
+}
+
+.order6 {
+    order: 6!important;
 }
 
 /*SCROLLBAR*/
