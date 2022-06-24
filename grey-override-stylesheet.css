@@ -288,7 +288,7 @@ div[id^="entry"]:hover {
 /*CUSTOM ELEMENTS*/
 
 #loadPre {
-    transition: 0.18s;
+    transition: opacity 0.09s ease-out;
     opacity: 0;
     pointer-events: none;
 }

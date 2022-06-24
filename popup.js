@@ -1,6 +1,6 @@
 /*Custom Color*/
 chrome.storage.sync.get({
-    customColors:["#000000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#d7dadc","#b3d0e4","#8dbbda"]
+    customColors:["#282a36","#1e212f","#282a35","#121419","#181823","#41445a","#c1c1c1","#41c721","#66d14b"]
 },
 function(data) {
     //console.log(data.customColors);
@@ -63,7 +63,7 @@ function(data) {
 );
 /*Custom Color Two*/
 chrome.storage.sync.get({
-    customColorsTwo:["#282a36","#1e212f","#282a35","#121419","#181823","#41445a","#c1c1c1","#41c721","#66d14b"]
+    customColorsTwo:["#000000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#d7dadc","#b3d0e4","#8dbbda"]
 },
 function(data) {
     //console.log(data.customColorsTwo);
