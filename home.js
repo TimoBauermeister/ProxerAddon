@@ -22,9 +22,16 @@ xmlhttp.onreadystatechange = function () {
             table.querySelector(".deleteReminder").parentElement.remove();
         }
         let animelist = table.getElementsByTagName("TABLE")[0];
-        animelist.firstChild.firstChild.lastChild.remove();
+        try {
+            animelist.firstChild.firstChild.lastChild.remove();
+        } catch (error) {
+            
+        }
         let mangalist = table.getElementsByTagName("TABLE")[1];
-        mangalist.firstChild.firstChild.lastChild.remove();
+        try {
+            mangalist.firstChild.firstChild.lastChild.remove();
+        } catch (error) {
+        }
 
         table.style.marginBottom = '50px';
         document.getElementsByClassName("inner")[0].prepend(table);
