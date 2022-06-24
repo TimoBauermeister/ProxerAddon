@@ -15,8 +15,9 @@ function searchAndReplace() {
                     // load grey override for changes in form and color
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
                     // set root to user colors
+                    
                     chrome.storage.sync.get({
-                        customColors:["#000","#045b62","#0f565e","#02393e","#0d484e","#3d8086"]
+                        customColors:["#000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#D7DADC","#b3d0e4","#8dbbda"]
                     },
                     function(data) {
                        //console.log(data.customColors);
@@ -28,6 +29,9 @@ function searchAndReplace() {
                         --element-darkend: ` + data.customColors[3] + `;
                         --main: `            + data.customColors[4] + `;
                         --main-accent: `     + data.customColors[5] + `;
+                        --textOnElem: `      + data.customColors[6] + `;
+                        --colorLink: `       + data.customColors[7] + `;
+                        --colorLinkHover: `  + data.customColors[8] + `;
                         `
                    )
                        update(data.customColors); //storing the storage value in a variable and passing to update function

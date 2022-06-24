@@ -1,6 +1,6 @@
 /*Custom Color*/
 chrome.storage.sync.get({
-    customColors:["#000","#045b62","#0f565e","#02393e","#0d484e","#3d8086"]
+    customColors:["#000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#D7DADC","#b3d0e4","#8dbbda"]
 },
 function(data) {
     //console.log(data.customColors);
@@ -39,6 +39,24 @@ function(data) {
     main_accent.value = data.customColors[5];
     main_accent.onchange = function() {
         data.customColors[5] = main_accent.value;
+        update(data.customColors);
+    }
+    let textOnElem = document.getElementById("textOnElem");
+    textOnElem.value = data.customColors[6];
+    textOnElem.onchange = function() {
+        data.customColors[6] = textOnElem.value;
+        update(data.customColors);
+    }
+    let colorLink = document.getElementById("colorLink");
+    colorLink.value = data.customColors[7];
+    colorLink.onchange = function() {
+        data.customColors[7] = colorLink.value;
+        update(data.customColors);
+    }
+    let colorLinkHover = document.getElementById("colorLinkHover");
+    colorLinkHover.value = data.customColors[8];
+    colorLinkHover.onchange = function() {
+        data.customColors[8] = colorLinkHover.value;
         update(data.customColors);
     }
 }
