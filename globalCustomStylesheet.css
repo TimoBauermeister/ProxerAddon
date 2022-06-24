@@ -120,11 +120,11 @@ font[style="font-size:1px;"] {
 }
 
 .colorbox_black {
-    background-color: lightblue !important;
+    background-color: #045b62 !important;
 }
 
 .colorbox_old_blue {
-    background-color: #076204 !important;
+    background-color: #181823 !important;
 }
 
 /*SCROLLBAR*/
@@ -141,7 +141,7 @@ font[style="font-size:1px;"] {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background: var(--element-accent);
+  background: var(--element);
   border: 2px var(--body-background) solid;
 }
 

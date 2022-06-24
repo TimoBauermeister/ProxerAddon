@@ -1,6 +1,6 @@
 let load = document.createElement("div");
 load.id = "loadPre"
-load.style = "height:calc(100vh - 40px); width:100vw; background-color:#000; position: fixed; top:40px; left:0; z-index:99;";
+load.style = "height:100vh; width:100vw; background-color:#000; position: fixed; top:0; left:0; z-index:99;";
 document.documentElement.appendChild(load);
 searchAndReplace();
 
@@ -15,9 +15,8 @@ function searchAndReplace() {
                     // load grey override for changes in form and color
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
                     // set root to user colors
-                    
                     chrome.storage.sync.get({
-                        customColors:["#000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#D7DADC","#b3d0e4","#8dbbda"]
+                        customColors:["#000000","#045b62","#0f565e","#02393e","#0d484e","#3d8086","#d7dadc","#b3d0e4","#8dbbda"]
                     },
                     function(data) {
                        //console.log(data.customColors);
@@ -34,35 +33,40 @@ function searchAndReplace() {
                         --colorLinkHover: `  + data.customColors[8] + `;
                         `
                    )
-                       update(data.customColors); //storing the storage value in a variable and passing to update function
                     }
                     );
-                    
                     return;
                 } else if (link.getAttribute("href").includes("blue")) {
                     // load grey override for changes in form and color
                     link.setAttribute("href", chrome.runtime.getURL("grey-override-stylesheet.css"));
-                    // create link element and override grey color scheme by changing :root
-                    let rootChanger = document.createElement("link");
-                    rootChanger.href = chrome.runtime.getURL('blue-override-stylesheet.css');
-                    rootChanger.type = "text/css";
-                    rootChanger.rel = "stylesheet";
-                    link.parentElement.appendChild(rootChanger);
+                    // set root to user colors
+                    chrome.storage.sync.get({
+                        customColorsTwo:["#282a36","#1e212f","#282a35","#121419","#181823","#41445a","#c1c1c1","#41c721","#66d14b"]
+                    },
+                    function(data) {
+                       document.documentElement.setAttribute("style",
+                        `
+                        --body-background: ` + data.customColorsTwo[0] + `;
+                        --element: `         + data.customColorsTwo[1] + `;
+                        --element-accent: `  + data.customColorsTwo[2] + `;
+                        --element-darkend: ` + data.customColorsTwo[3] + `;
+                        --main: `            + data.customColorsTwo[4] + `;
+                        --main-accent: `     + data.customColorsTwo[5] + `;
+                        --textOnElem: `      + data.customColorsTwo[6] + `;
+                        --colorLink: `       + data.customColorsTwo[7] + `;
+                        --colorLinkHover: `  + data.customColorsTwo[8] + `;
+                        `
+                   )
+                    }
+                    );
                     return;
+                } else {
+                    load.remove();
                 }
-                // add more styles here removes load if there is no link found
-                load.remove();
                 return;
             }
         }
         searchAndReplace();
     }, 10);
     
-}
-function update(array) {
-    chrome.storage.sync.set({
-        customColors:array
-    }, function() {
-        console.log("added to list with new values");
-    });
 }
