@@ -1,18 +1,16 @@
 :root { /*root overwrite for each theme this is default*/
-    --noColor: #0000;
     --body-background: #000;
     --element: #242426;
     --element-accent: #303030;
     --element-darkend: #222222;
     --main: #1A1A1B;
     --main-accent: #474748;
-
     /*secondary in case needed*/
     --secondary: #045b62;
     --secondary-accent: #3d8086;
     --secondary-element: #0d484e;
     --secondary-darkend: #02393e;
-
+    
     --textOnElem: #D7DADC;
     --colorLink: #b3d0e4;
     --colorLinkHover: #8dbbda;
@@ -110,6 +108,7 @@ table.calendarTable tbody td[width="150"] img:hover {
 font[style="font-size:1px;"] {
     font-size: 38px !important;
 }
+
 /*manga buy thingy*/
 .article {
     height: 370px !important;
@@ -121,7 +120,7 @@ font[style="font-size:1px;"] {
 }
 
 .colorbox_black {
-    background-color: #045b62 !important;
+    background-color: lightblue !important;
 }
 
 .colorbox_old_blue {

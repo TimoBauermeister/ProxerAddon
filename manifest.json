@@ -86,7 +86,7 @@
     ],
     "name": "Proxer Plus",
     "description": "Make your life on proxer more pleasant!",
-    "version": "1.0.8",
+    "version": "1.1.0",
     "manifest_version": 3,
     "background": {
         "service_worker": "main.js"
