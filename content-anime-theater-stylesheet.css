@@ -6,56 +6,18 @@
 }
 
 iframe {
+    /* visibility: hidden !important; */ /*FOR DEBUGGING*/
     height: 100vh !important;
     width: 100vw !important;
     overflow: visible !important;
     position: absolute !important;
     top: 40px !important;
     left: 0px !important;
-    z-index: 2 !important;
+    z-index: 1 !important;
 }
 
 #reportStream {
     display: none !important;
-}
-
-#psplayercontrols {
-    background-color: black;
-    font-family: sans-serif;
-    font-size: 10px;
-    opacity: 0.5;
-    padding: 5px;
-    position: absolute;
-    top: 0;
-    color: white;
-
-}
-
-#psplayercontrols a {
-    color: white;
-    text-decoration:none;
-}
-
-.video_fw_info {
-    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-    color: #FFF;
-    display: none;
-    margin: 30px 15px;
-}
-
-.video_fw_info a {
-    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-    color: #FFF;
-}
-
-iframe[src^="https://stream.proxer.me/"] {
-    position: absolute;
-    z-index: 1 !important;
-    top: 40px !important;
-    left: 0px !important;
-    height: calc(100vh - 40px) !important;
-    width: calc(100vw - 0px) !important;
-    overflow: visible !important;
 }
 
 #wContainer tbody tr td.wMirror, #customButtons {
@@ -95,7 +57,6 @@ iframe[src^="https://stream.proxer.me/"] {
     pointer-events: auto !important;
     order: 4;
 }
-
 
 #topButtonMenu a:not(.changeMirror) {
     display: inline;
@@ -145,57 +106,32 @@ iframe[src^="https://stream.proxer.me/"] {
     max-height: 30px !important;
 }
 
-#psplayercontrols {
-    opacity: 0 !important;
-    bottom: 0px !important;
-    top: auto !important;
-}
-#psplayercontrols:hover {
-    opacity: 0.3 !important;    
-    transition: opacity 0.2s ease-in;
-}
-ul#simple-navi li a[href^="/info/"] {
-    position: fixed !important;
-    z-index: 6 !important;
-    top: 0px !important;
-    left: 0px !important;
-    height: 40px !important;
-    padding: 0px !important;
-    text-align: center !important;
-    line-height: 40px !important;
-    width: 120px !important;
-}
-
-span.wName {
-    line-height: 40px !important;
-    height: 40px !important;
-    order: 3;
-}
-
 a.menu:not(.changeMirror) {
     font-size: 1.8em !important;
     font-weight: 800 !important;
     line-height: 34px !important;
 }
 
-#navi0  {
-    display: none !important;
+.next  {
+    order: 7 !important;
 }
-
-#topButtonMenu tr {
+.textMiddle {
     flex-grow: 1;
     display: flex;
     justify-content: center !important;
-    line-height: 46px !important;
     height: 40px !important;
+}
+.textMiddle * {
+    line-height: 40px !important;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 span.wLinkerText {
     display: none !important;
-}
-
-.order6 {
-    order: 6!important;
 }
 
 /*SCROLLBAR*/
