@@ -13,7 +13,7 @@ iframe {
     position: absolute !important;
     top: 40px !important;
     left: 0px !important;
-    z-index: 1 !important;
+    z-index: 2 !important;
 }
 
 #reportStream {

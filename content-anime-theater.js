@@ -7,11 +7,6 @@ s.onload = function() {};
 chrome.storage.sync.get(['theaterMode'], function (result) {
     if(result && result['theaterMode']) {
         var nextHref = "";
-        let link = document.createElement("link");
-        link.href = chrome.runtime.getURL('content-anime-theater-stylesheet.css');
-        link.type = "text/css";
-        link.rel = "stylesheet";
-        document.documentElement.insertBefore(link, document.documentElement.firstChild);
         setTimeout(() => {
             let divNewButtonsTop = document.createElement("div");
             divNewButtonsTop.setAttribute("id", "topButtonMenu");
@@ -93,11 +88,4 @@ function getHREF() {
         }
     }
     return href;
-}
-
-function transitionIn(toTransition) {
-    toTransition.setAttribute("class", "transitionIn");
-    setTimeout(() => {
-        toTransition.setAttribute("class", "");
-    }, 1000);
 }
