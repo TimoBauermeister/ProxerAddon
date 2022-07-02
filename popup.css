@@ -158,7 +158,7 @@ a, a:hover, a:active, a:visited, a:focus, a:hover { color:white }
     display: block;
 }
 
-.theaterElement {
+.sliderDivElement {
     display:inline-block;
     text-align: center;
     vertical-align: middle;

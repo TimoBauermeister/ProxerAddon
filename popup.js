@@ -134,12 +134,21 @@ let titleManga = 'No link has been set yet :/';
 let linkManga = 'No link has been set yet :/'
 let aManga = document.getElementById("linkManga");
 
-let checkbox = document.getElementById('inputEnableTheaterMode');
-checkbox.addEventListener("click", theaterModeToggle);
+let checkboxTheaterMode = document.getElementById('inputEnableTheaterMode');
+checkboxTheaterMode.addEventListener("click", theaterModeToggle);
 
 chrome.storage.sync.get(['theaterMode'], function (result) {
     if (result) {
-        checkbox.checked = result['theaterMode'];
+        checkboxTheaterMode.checked = result['theaterMode'];
+    }
+});
+
+let checkboxAutoplay = document.getElementById('inputEnableAutoplay');
+checkboxAutoplay.addEventListener("click", autoplayToggle);
+
+chrome.storage.sync.get(['autoplay'], function (result) {
+    if (result) {
+        checkboxAutoplay.checked = result['autoplay'];
     }
 });
 
@@ -169,7 +178,12 @@ chrome.storage.sync.get(['lastPageTitleManga'], function (result) {
 });
 
 function theaterModeToggle() {
-    chrome.storage.sync.set({ 'theaterMode': checkbox.checked }, function () {
+    chrome.storage.sync.set({ 'theaterMode': checkboxTheaterMode.checked }, function () {
+    });
+}
+
+function autoplayToggle() {
+    chrome.storage.sync.set({ 'autoplay': checkboxAutoplay.checked }, function () {
     });
 }
 
