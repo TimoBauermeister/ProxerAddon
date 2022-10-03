@@ -16,6 +16,13 @@ iframe {
     z-index: 2 !important;
 }
 
+div.wStream div[style^="position:relative"] {
+    z-index: 4 !important;
+    position: fixed!important;
+    left: auto!important;
+    top: 10%!important;
+}
+
 #reportStream {
     display: none !important;
 }
