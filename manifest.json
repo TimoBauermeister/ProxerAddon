@@ -1,8 +1,7 @@
 {
   "browser_specific_settings": {
     "gecko": {
-      "id": "{fc1e1af3-900d-4ed2-aaa2-8577c686e323}",
-      "strict_min_version": "42.0"
+      "id": "{fc1e1af3-900d-4ed2-aaa2-8577c686e323}"
     }
   },
   "author": "Hazy, eSaltcracker",
