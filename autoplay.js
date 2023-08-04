@@ -1,3 +1,3 @@
 setTimeout(() => {
   player.play();
-}, 10);
+}, 100);

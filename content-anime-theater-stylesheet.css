@@ -1,19 +1,24 @@
 
-#plyr, .plyr audio, .plyr video, #player_code, .plyr--video {
+.plyr, #plyr, .plyr audio, .plyr video, #player_code, .plyr--video, .plyr--full {
     height: 100vh !important;
     width: 100vw !important;
     z-index: 1;
 }
 
-iframe {
+div.wStream iframe {
     /* visibility: hidden !important; */ /*FOR DEBUGGING*/
     height: 100vh !important;
     width: 100vw !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     position: absolute !important;
     top: 40px !important;
     left: 0px !important;
     z-index: 2 !important;
+    max-height: calc(100vh - 40px) !important;
+}
+
+div.wStream > iframe {
+    max-height: calc(100vh - 40px) !important;
 }
 
 div.wStream div[style^="position:relative"] {
@@ -36,7 +41,7 @@ div.wStream div[style^="position:relative"] {
     opacity: 0;
     background-color: var(--noColor);
     position: fixed !important;
-    z-index: 2 !important;
+    z-index: 5 !important;
     top: 40px !important;
     pointer-events: auto !important;
     left: 0px !important;
