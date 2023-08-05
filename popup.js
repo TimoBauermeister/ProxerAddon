@@ -165,15 +165,6 @@ browser.storage.sync.get(["theaterMode"], function (result) {
   }
 });
 
-let checkboxAutoplay = document.getElementById("inputEnableAutoplay");
-checkboxAutoplay.addEventListener("click", autoplayToggle);
-
-browser.storage.sync.get(["autoplay"], function (result) {
-  if (result) {
-    checkboxAutoplay.checked = result["autoplay"];
-  }
-});
-
 aAnime.onclick = function () {
   tabs.create({ active: true, url: linkAnime });
 };

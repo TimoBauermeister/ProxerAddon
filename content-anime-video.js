@@ -10,14 +10,3 @@ browser.storage.sync.get(["theaterMode"], function (result) {
     );
   }
 });
-browser.storage.sync.get(["autoplay"], function (result) {
-  if (result) {
-    setTimeout(() => {
-      // trigger autoplay
-      let s = document.createElement("script");
-      s.src = browser.runtime.getURL("autoplay.js");
-      s.onload = function () {};
-      (document.head || document.documentElement).appendChild(s);
-    }, 300);
-  }
-});
