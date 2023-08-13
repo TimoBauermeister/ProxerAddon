@@ -54,13 +54,14 @@
   ],
   "name": "Proxer Plus",
   "description": "Make your life on proxer more pleasant! Firefox edition",
-  "version": "1.1.7.0",
+  "version": "1.1.7.1",
   "manifest_version": 2,
   "permissions": ["storage"],
   "web_accessible_resources": [
     "home-tooltip.js",
     "content-anime-theater-stylesheet.css",
     "grey-override-stylesheet.css",
+    "default.css",
     "content-anime-donatecall.js"
   ],
   "browser_action": {
